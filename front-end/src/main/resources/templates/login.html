@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login page</title>
+</head>
+<body>
+<h1>Login page</h1>
+<!--<p th:if="${loginError}" class="error">Wrong user or password</p>-->
+<!--<form th:object="${jwtRequest}" th:action="@{/login/getJwtToken}" method="post">-->
+<form th:object="${jwtRequest}" method="post">
+    <label for="email">Username</label>:
+    <input type="text" id="email" name="email" autofocus="autofocus"/> <br/>
+    <label for="password">Password</label>:
+    <input type="password" id="password" name="password"/> <br/>
+</form>
+<input type="submit" id="submitButton" value="Log in"/>
+<script src="../js/login.js"></script>
+</body>
+</html>

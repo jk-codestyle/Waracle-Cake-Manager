@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./back-end
+      dockerfile: Dockerfile
+    image: backend:1
+    expose:
+      - 8071
+    ports:
+    - 8071:8071
+    networks:
+      - mynetwork
+  frontend:
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    image: frontend:1
+    expose:
+      - 8080
+    ports:
+    - 8080:8080
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    driver: bridge
+
+
+
+
+
+
+
+
